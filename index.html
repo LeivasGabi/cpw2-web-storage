@@ -44,6 +44,11 @@
          * escolhido no no local *localStorage* sempre que o usuário selecionar
          * o tipo da fonte por meio do HTML select.
          */
+
+          let inputFont = document.getElementById("font");
+          document.body.style.fontFamily = inputFont.value;
+
+          localStorage.setItem("font", inputFont.value);
       }
 
       /**
@@ -55,6 +60,7 @@
          * 3 - Altere o método `load` para recuperar o nome da fonte do *localStorage* e
          * estilizar o texto `Web Storage`
          */
+        document.body.style.fontFamily = localStorage.getItem("font");
       }
     </script>
   </body>
